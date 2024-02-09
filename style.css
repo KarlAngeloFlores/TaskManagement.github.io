@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+* {
+    font-family: 'Poppins';
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size:8.1666666666667vh ;
+    border-radius: 5px;
+    margin: auto;
+}
+body {
+    background-color: rgb(34, 51, 58);
+}
+
+
+/**Top**/
+
+.top-container {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    grid-template-columns: auto auto auto auto;
+
+}
+
+.input-todo {
+    padding: 10px 0px 10px 10px;
+    border-radius: 0;
+    border-width: 1px;
+    width: 230px;
+    font-size: 14px;
+}
+
+.todo-date {
+    padding: 9px 10px;
+    border-width: 1px;
+    color: black;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.add-btn {
+    padding: 10px 20px;
+    width: 64px;
+    cursor: pointer;
+    background-color: white;
+    border-width: 1px;
+    
+}
+
+.add-btn:hover {
+    cursor: pointer;
+    background-color: aliceblue;
+}
+
+.category-button {
+    background-color: white;
+    padding:10px 20px;
+    border-width: 1px;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+.dropdown a {
+    display: block;
+    text-decoration: none;
+    padding:5px 10px;
+}
+
+.category-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 10px;
+    border-width: 1px;
+}
+
+.dropdown:hover .category-content{
+    display: block;
+}
+
+.category-button:hover {
+    background-color: ghostwhite;
+}
+
+.dropdown a:hover {
+    background-color: aliceblue;
+    border: solid;
+    border-width: 1px;
+    cursor: pointer;
+      
+}
+
+/**Body**/
+.list-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+flex-wrap: wrap;
+}
+
+.p-todo {
+    background-color: #FFAFAF;
+    font-size: 24px;
+    font-weight: 700;
+    width: 390px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.p-todo, .p-progress, .p-done {
+    text-align: center;
+}
+
+.task-container {
+    margin-top: 10px;
+    background-color: #FFDEDE;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px rgb(0, 0, 0);
+}
+
+.js-task-list {
+    width: 400px;
+    background-color: #FFDEDE;
+    border-radius: 5px;
+}
+
+.js-progress-list  {
+    width: 400px;
+    background-color: #ECFAFF;
+    border-radius: 5px;
+}
+
+.js-done-list {
+    width: 400px;
+    background-color: #E7FFD9;
+    border-radius: 5px;
+}
+
+
+
+
+
+.task-div {
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns:145px 110px 80px 40px;
+    margin-bottom: 5px;
+    gap: 5px;
+    place-content: center;
+}
+
+.task-name, .task-date{
+    color: rgb(0, 0, 0);
+    text-align: start;   
+    border-radius: 5px;
+    background-color: #FFAFAF;
+    padding: 10px 0;
+    overflow-y: auto;
+}
+
+.task-name {
+    padding: 10px 5px;
+}
+
+.task-date {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.remove-btn {
+    
+    border-radius: 5px;
+    border: none;
+    color: black;
+    background-color: #89CAF9;
+    cursor: pointer;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.remove-btn:hover {
+    background-color: rgb(225, 55, 86);
+}
+
+.p-progress {
+    background-color: #89CAF9;
+    font-size: 24px;
+    font-weight: 700;
+    width: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.progress-container {
+    margin-top: 10px;
+    background-color: #ECFAFF;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-name, .progress-date {
+    background-color: #89CAF9;
+    border-radius: 5px;
+    padding: 10px 0px;
+}
+
+.progress-name {
+    padding: 10px 5px;
+}
+
+.progress-date {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-div {
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns:145px 110px 90px 40px;
+    margin-bottom: 5px;
+    gap: 5px;
+    place-content: center;
+}
+
+.completed-button {
+    border-radius: 5px;
+    border: none;
+    color: black;
+    background-color: #C2F2C1;
+    cursor: pointer;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.completed-button:hover {
+    background-color: rgb(35, 123, 35);
+}
+
+.completed-container {
+    margin-top: 10px;
+     background-color: #E7FFD9;
+     border-radius: 5px;
+}
+
+.p-completed {
+text-align: center;
+background-color: #90dd8f;
+    font-size: 24px;
+    font-weight: 700;
+    width: 390px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.completed-div {
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns:150px 140px 90px ;
+    margin-bottom: 5px;
+    gap: 5px;
+    place-content: center;
+}
+
+.completed-name, .completed-date {
+    background-color: #90dd8f;
+    border-radius: 5px;
+    padding: 10px 0px;
+}
+
+.completed-name {
+    padding: 10px 5px;
+}
+
+.completed-date{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-button {
+    border-radius: 5px;
+    background-color: #791E1E;
+    color: white;
+    border-width: 1px;
+    cursor: pointer;
+
+}
+
+.delete-button:hover {
+    background-color: #470e0e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trash-icon {
+width: 24px;
+height: 28px;
+
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8!">
+    <meta nam   e="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <h1>Task Management</h1>
+
+
+    <div class = "top-container">
+
+        <div>
+            <input type="text" placeholder="Todo name" id = "input_todo" class = "input-todo" onkeypress="
+
+                if(event.key == 'Enter') {
+                addTodo();
+                renderArray();
+
+            }">
+        </div>
+
+        <div>
+            <input type="date" class = "todo-date" id = "todo_date" onkeypress="
+                
+                if(event.key == 'Enter') {
+                addTodo();
+                renderArray();
+
+            }
+                
+                
+                ">
+        </div>
+
+        <!--<div class = "dropdown">
+            <button class = "category-button">category &#x25BC;</button>
+                <div class = "category-content">
+                    <a class = "category-todo">To-do</a>
+                    <a class = "category-progess">In progress</a>
+                    <a class = "category-completed">Completed</a>
+                </div>
+        </div>
+    -->
+        <button id = "add_btn" class = "add-btn">Add</button>
+
+    </div>
+
+    <div class = "list-container">
+
+        <div class = "task-container">
+            <span class = "p-todo">To Do</span>
+            <div class = "js-task-list" id = "js_todo_list"></div>
+        </div>
+
+        <div class = "progress-container">
+            <span class = "p-progress">In progress</span>
+            <div class = "js-progress-list"></div>
+        </div>
+
+        <div class = "completed-container">
+            <p class = "p-completed">Completed</p>
+            <div class = "js-completed-list"></div>    
+        </div>
+        
+        </div>
+
+    </div>
+    <script src="script.js" defer></script>
+</body>
+
+
+</html>
